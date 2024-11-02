@@ -25,7 +25,6 @@ def update_centroids(data, clusters, k):
 
 # Funkcja K-means
 def kmeans(data, k, max_iter=100):    # Losowe wybieranie k centroidów z danych
-    np.random.seed(42)  # Ustawienie ziarna dla generatora liczb pseudolosowych
     centroids = data[np.random.choice(data.shape[0], k, replace=False)] #losowo wybierane k centroidów
 
     for i in range(max_iter):
@@ -38,18 +37,3 @@ def kmeans(data, k, max_iter=100):    # Losowe wybieranie k centroidów z danych
         centroids = new_centroids  # Ustawienie nowych centroidów
 
     return clusters, centroids
-
-
-# Główna część programu
-if __name__ == "__main__":
-    # Wczytanie datasetu digits
-    digits = load_digits()
-    data = digits.data
-    k = 10
-    clusters, centroids = kmeans(data, k)
-
-    print("Centroidy klastrów:")
-    print(centroids)
-
-    print("Przypisania punktów do klastrów:")
-    print(clusters)
