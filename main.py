@@ -39,7 +39,7 @@ def kmeans(data, k, max_iter=100):    # Losowe wybieranie k centroidów z danych
     return clusters, centroids
 
 
-# Funkcja obliczająca dokładność, porównując klastery z prawdziwymi etykietami
+# Funkcja obliczająca dokładność, porównując klastry z prawdziwymi etykietami
 #Oblicza dokładność klastrowania, porównując przypisania klastrów do rzeczywistych etykiet. 
 #Dla każdego klastra znajduje najczęściej występującą rzeczywistą etykietę i zlicza, 
 #ile punktów w tym klastrze ma tę samą etykietę. Całkowita liczba poprawnych przypisań jest
